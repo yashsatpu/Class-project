@@ -1,0 +1,34 @@
+// Discount on sales amount ;
+
+import java.util.*;
+
+public class Discount {
+    public static void main(String[] args) {
+       Scanner input=new Scanner(System.in);
+        System.out.print("Enter your Sales amount \t:\t");
+        int s_a=input.nextInt();
+        
+        System.out.print("You want a sales discount\t:\t");
+        char s_d=input.next().charAt(0);
+        
+        double p_amount;
+        if(s_d=='y'||s_d=='Y'){
+            if(s_a >= 25000){
+                p_amount=(double)0.20*s_a;
+                System.out.println("Your Saving 20% \t:\t"+p_amount);
+            }
+            else if(s_a <= 25000 && s_a >= 10000){
+                p_amount=(double)0.10*s_a;
+                System.out.println("Your Saving 10%\ t:\t"+p_amount);
+            }
+            else{
+                p_amount=(double)0.05*s_a;
+                System.out.println("Your Saving 5% \t:\t"+p_amount);
+            }
+            double to = s_a - p_amount;
+            System.out.print("Your Payind amount \t:\t"+to);
+        }
+        else
+            System.out.print("Your Payind amount \t:\t"+s_a);
+    }
+}
