@@ -1,0 +1,24 @@
+// You can vote or not
+
+import java.util.*;
+public class Vote {
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        System.out.println("Enter your Nationality\t:\t");
+        String net=input.nextLine();
+
+        System.out.println("Enter your Age\t:\t");
+        int age=input.nextInt();
+        if(net.equalsIgnoreCase("Indian")==true && age>=18){
+            System.out.println("You have any ID \t:\t");
+            char id=input.next().charAt(0);
+            
+            if(id=='Y'|| id=='y'){
+                System.out.println("You can Vote");
+            }
+        }
+        else{
+            System.out.println("Sorry you cannot vote");
+        }
+    }
+}
